@@ -3,12 +3,39 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Untitled Document</title>
+  <title>Simple Lightbox</title>
+  <link href="age-gate.css" rel="stylesheet">
 </head>
 
 <body>
 
+  <!-- custom code for lightbox player -->
+    <div class="player-block">
+			<div id="container">
+					<!-- This container is for the clickable video still images -->
+			</div>
 
+			<!-- lightbox container -->
+			<div id="playerLightbox" class="playerHide">
+
+					<video id="myPlayerID"
+					  data-video-id="5141730843001"
+						data-account="1752604059001"
+						data-player="default"
+						data-embed="default"
+						data-application-id
+						class="video-js"
+						controls
+						width="560"
+						height="315"></video>
+
+				<div id="playerClose" class="playerClose" onClick="hideAndStop();">Close</div>
+			</div>
+
+	  <script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+
+    <script type="text/javascript" src="simple-lightbox.js"></script>
+    <script>videojs('myPlayerID').simpleLightbox();</script>
 
 </body>
 
