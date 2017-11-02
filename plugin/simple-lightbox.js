@@ -4,6 +4,7 @@ videojs.registerPlugin('simpleLightbox', function() {
       eContainer = document.getElementById("container"),
       eLightbox = document.getElementById("playerLightbox");
 
+    // +++ Wait for loadstart +++
     // Listen for the loadstart event
     myPlayer.on('loadstart',function(){
       var str = "";
@@ -13,6 +14,7 @@ videojs.registerPlugin('simpleLightbox', function() {
         myPlayer.mediainfo.name + '" width="100%" height="100%"/>';
       eContainer.innerHTML = str;
 
+      // +++ Listen for poster click +++
       // Add click event listener to the video poster image
       eContainer.onclick = function(e) {
         // reveal the lightbox
@@ -21,6 +23,7 @@ videojs.registerPlugin('simpleLightbox', function() {
         myPlayer.play();
       }
 
+      // +++ Close the lightbox +++
       // Listen for a click event on the close button
       playerClose.onclick = function(e) {
         myPlayer.pause();
