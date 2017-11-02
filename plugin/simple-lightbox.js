@@ -13,7 +13,7 @@ videojs.registerPlugin('simpleLightbox', function() {
         myPlayer.mediainfo.name + '" width="100%" height="100%"/>';
       eContainer.innerHTML = str;
 
-      // Add click event listener to the video still image
+      // Add click event listener to the video poster image
       eContainer.onclick = function(e) {
         // reveal the lightbox
         eLightbox.className = "playerShow";
