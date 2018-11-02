@@ -76,7 +76,7 @@
     <!-- lightbox container -->
     <div id="playerLightbox" class="playerHide">
 
-      <video id="myPlayerID"
+      <video-js id="myPlayerID"
         data-video-id="5141730843001"
           data-account="1752604059001"
           data-player="default"
@@ -85,13 +85,13 @@
           class="video-js"
           controls
           width="560"
-          height="315"></video>
+          height="315"></video-js>
 
         <!-- close player button -->
         <div id="playerClose" class="playerClose" onClick="hideAndStop();">Close</div>
     </div>
 
-    <script src="//players.brightcove.net/1752604059001/default_default/index.min.js"></script>
+    <script src="https://players.brightcove.net/1752604059001/default_default/index.min.js"></script>
   </div>
   <!-- id="player-block" -->
 
@@ -101,7 +101,7 @@
       eContainer = document.getElementById("container"),
       eLightbox = document.getElementById("playerLightbox");
 
-    videojs("myPlayerID").ready(function(){
+    videojs.getPlayer('myPlayerID').ready(function() {
       // Get a reference to the player
       myPlayer = this;
 
